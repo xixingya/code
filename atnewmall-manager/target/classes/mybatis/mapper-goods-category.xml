@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.atnewmall.manager.dao.GoodsCategoryDao" >
+
+    <select id="queryAll" resultType="com.atguigu.atnewmall.bean.GoodsCategory">
+        select
+            *
+        from t_goods_category
+        order by orderid
+    </select>
+
+    <select id="queryById" resultType="com.atguigu.atnewmall.bean.GoodsCategory">
+        select
+            *
+        from t_goods_category
+        where id = #{id}
+    </select>
+
+    <select id="queryPageData" resultType="com.atguigu.atnewmall.bean.GoodsCategory">
+        select
+            *
+        from t_goods_category
+        <where>
+           <if test="queryText != null">
+           and name like concat('%',#{queryText},'%')
+           </if>
+        </where>
+        order by createtime desc
+        limit #{start}, #{size}
+    </select>
+    
+    <select id="queryPageCount" resultType="int">
+        select
+            count(*)
+        from t_goods_category
+        <where>
+           <if test="queryText != null">
+           and name like concat('%',#{queryText},'%')
+           </if>
+        </where>
+    </select>
+    
+    <insert id="insertGoodsCategory">
+        insert into t_goods_category (
+            name, remark, orderid, createtime
+        ) values (
+            #{name}, #{remark}, #{orderid}, #{createtime}
+        )
+    </insert>
+    
+    <update id="updateGoodsCategory">
+        update t_goods_category
+        set name = #{name}, remark = #{remark}, orderid = #{orderid}
+        where id = #{id}
+    </update>
+    
+    <delete id="deleteGoodsCategoryById">
+        delete from t_goods_category where id = #{id}
+    </delete>
+    
+    <delete id="deleteGoodsCategorys">
+        delete from t_goods_category where id in
+        <foreach collection="gcs" item="gc" open="(" close=")" separator=",">
+        #{gc.id}
+        </foreach>
+    </delete>
+</mapper>
