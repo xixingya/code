@@ -9,7 +9,7 @@ import com.atguigu.atnewmall.bean.AJAXResult;
 import com.atguigu.atnewmall.bean.User;
 import com.atguigu.atnewmall.common.util.MD5Util;
 import com.atguigu.atnewmall.manager.service.RegService;;
-
+//是发放的范德萨
 @Controller
 @RequestMapping("/user")
 public class RegController {
