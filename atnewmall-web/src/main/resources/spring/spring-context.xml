@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
     
     <!-- 扫描注解类 -->
-    <context:component-scan base-package="com.atguigu.*" >
+    <context:component-scan base-package="tech.petmall.*" >
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     
@@ -33,7 +33,7 @@
     </bean>
     
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
-        <property name="basePackage" value="com.atguigu.atnewmall.**.dao" />
+        <property name="basePackage" value="tech.petmall.petmall.**.dao" />
     </bean>
     
     <!-- AOP -->
@@ -48,6 +48,6 @@
         </tx:attributes>
     </tx:advice>    
     <aop:config>
-        <aop:advisor advice-ref="transactionAdvice" pointcut="execution(* com.atguigu..*Service.*(..))"/>
+        <aop:advisor advice-ref="transactionAdvice" pointcut="execution(* tech.petmall..*Service.*(..))"/>
     </aop:config>
 </beans>

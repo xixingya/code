@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
     <!-- 扫描控制器组件 -->
-    <context:component-scan base-package="com.atguigu.*" use-default-filters="false" >
+    <context:component-scan base-package="tech.petmall.*" use-default-filters="false" >
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     

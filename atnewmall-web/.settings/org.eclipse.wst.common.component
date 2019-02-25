@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="atnewmall-web-0.0.1-SNAPSHOT">
+    <wb-module deploy-name="petmall-web-1">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-        <dependent-module archiveName="atnewmall-portal-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/atnewmall-portal/atnewmall-portal">
+        <dependent-module archiveName="petmall-portal-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/petmall-portal/petmall-portal">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="atnewmall-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/atnewmall-common/atnewmall-common">
+        <dependent-module archiveName="petmall-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/petmall-common/petmall-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="atnewmall-manager-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/atnewmall-manager-api/atnewmall-manager-api">
+        <dependent-module archiveName="petmall-manager-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/petmall-manager-api/petmall-manager-api">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="atnewmall-portal-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/atnewmall-portal-api/atnewmall-portal-api">
+        <dependent-module archiveName="petmall-portal-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/petmall-portal-api/petmall-portal-api">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="atnewmall-manager-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/atnewmall-manager/atnewmall-manager">
+        <dependent-module archiveName="petmall-manager-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/petmall-manager/petmall-manager">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <property name="java-output-path" value="/petmall-web/target/classes"/>
         <property name="context-root" value="/"/>
-        <property name="java-output-path" value="/atnewmall-web/target/classes"/>
     </wb-module>
 </project-modules>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.atguigu.atnewmall.manager.dao.UserDao" >
+<mapper namespace="tech.petmall.petmall.manager.dao.UserDao" >
 
-    <select id="queryLoginUser" resultType="com.atguigu.atnewmall.bean.User">
+    <select id="queryLoginUser" resultType="tech.petmall.petmall.bean.User">
         select * from t_user where loginacct = #{loginacct} and userpswd = #{userpswd}
     </select>
 </mapper>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.atguigu.atnewmall.portal.dao.GoodsDao" >
+<mapper namespace="tech.petmall.petmall.portal.dao.GoodsDao" >
 
-    <resultMap type="com.atguigu.atnewmall.bean.Goods" id="goodsResultMap">
+    <resultMap type="tech.petmall.petmall.bean.Goods" id="goodsResultMap">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="remark" column="remark"/>
         <result property="price" column="price"/>
         <result property="iconpath1" column="iconpath1"/>
         <result property="stock" column="stock"/>
-        <association property="goodsInfo" javaType="com.atguigu.atnewmall.bean.GoodsInfo">
+        <association property="goodsInfo" javaType="tech.petmall.petmall.bean.GoodsInfo">
             <result property="favcnt" column="favcnt"/>
         </association>
-        <association property="sellerInfo" javaType="com.atguigu.atnewmall.bean.SellerInfo">
+        <association property="sellerInfo" javaType="tech.petmall.petmall.bean.SellerInfo">
             <result property="introduce" column="introduce"/>
             <result property="remark" column="siremark"/>
             <result property="cstel" column="cstel"/>
@@ -33,11 +33,11 @@
         where g.id = #{id}
     </select>
 
-    <select id="queryGoodsInfoById" resultType="com.atguigu.atnewmall.bean.GoodsInfo">
+    <select id="queryGoodsInfoById" resultType="tech.petmall.petmall.bean.GoodsInfo">
         select * from t_goods_info where goodsid = #{goodsid}
     </select>
 
-    <select id="queryAll" resultType="com.atguigu.atnewmall.bean.Goods">
+    <select id="queryAll" resultType="tech.petmall.petmall.bean.Goods">
         select
             *
         from t_goods
