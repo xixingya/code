@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tech.petmall.petmall.portal.dao.MemberDao" >
+
+    <select id="queryCartsByMemberid" resultType="tech.petmall.petmall.bean.Cart">
+        select
+            c.*,
+            g.name as goodsname,
+            g.remark as goodsremark,
+            info.introduce as introduce
+        from t_cart c
+        join t_goods g on c.goodsid = g.id
+        join t_seller_info info on c.memberid = info.memberid
+        where c.memberid = #{memberid}
+    </select>
+
+    <select id="queryCart" resultType="tech.petmall.petmall.bean.Cart">
+        select
+            *
+        from t_cart
+        where memberid = #{memberid} and goodsid = #{goodsid}
+    </select>
+
+    <select id="queryMemberGoods" resultType="tech.petmall.petmall.bean.Goods">
+        select
+            *
+        from t_goods
+        where memberid = #{id}
+    </select>
+
+    <select id="queryMemberByLoginacct" resultType="tech.petmall.petmall.bean.Member">
+        select
+            *
+        from t_member
+        where loginacct = #{loginacct}
+    </select>
+    
+    <insert id="insertGoods" useGeneratedKeys="true" keyProperty="id">
+         insert into t_goods (
+			 name
+			,memberid
+			,stock
+			,price
+			,iconpath
+			,iconpath1
+			,categoryid
+			,remark
+         ) values (
+			#{name}
+			,#{memberid}
+			,#{stock}
+			,#{price}
+			,#{iconpath}
+			,#{iconpath1}
+			,#{categoryid}
+			,#{remark}
+         )
+    </insert>
+    
+    <insert id="insertSellerInfo">
+        insert into t_seller_info (
+			memberid
+			,introduce
+			,remark
+			,tel
+			,cstel
+        ) values (
+			#{memberid}
+			,#{introduce}
+			,#{remark}
+			,#{tel}
+			,#{cstel}
+        )
+    </insert>
+    
+    <insert id="insertGoodsTags">
+        insert into t_goods_tag (
+            goodsid, tagid
+        ) values
+        <foreach collection="gts" item="gt" separator=",">
+        ( #{gt.goodsid}, #{gt.tagid} )
+        </foreach>
+    </insert>
+    
+    <insert id="insertGoodsInfo">
+         insert into t_goods_info (
+             goodsid
+         ) values (
+             #{goodsid}       
+         )
+    </insert>
+    
+    <insert id="insertFavGoods">
+        insert into t_fav_goods (memberid, goodsid)
+        values ( #{memberid}, #{goodsid} )
+    </insert>
+    
+    <insert id="insertCart">
+        insert into t_cart (
+            memberid, goodsid, num, price, jointime
+        ) values (
+            #{memberid}, #{goodsid}, #{num}, #{price}, #{jointime}
+        )
+    </insert>
+    
+    <insert id="insertOrder" useGeneratedKeys="true" keyProperty="id">
+        insert into t_order(
+			memberid,
+			status,
+			createtime,
+			price
+        ) values (
+            #{memberid},
+            #{status},
+            #{createtime},
+            #{price}
+        )
+    </insert>
+    
+    <insert id="insertOrderItems">
+        insert into t_order_item (
+			orderid,
+			goodsid,
+			num,
+			price
+        ) values
+        <foreach collection="items" item="item" separator=",">
+        ( #{item.orderid}, #{item.goodsid}, #{item.num}, #{item.price} )
+        </foreach>
+    </insert>
+    
+    <update id="updateGoodsInfoFavcnt">
+        update t_goods_info set favcnt = #{favcnt} where id = #{id}
+    </update>
+    
+    <update id="updateCart">
+        update t_cart set num = #{num} where id = #{id}
+    </update>
+    
+    <delete id="deleteCarts">
+        delete from t_cart where memberid = #{memberid}
+    </delete>
+</mapper>
