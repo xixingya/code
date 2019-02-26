@@ -106,7 +106,7 @@ h3.break>a {
 			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			  <div class="container">
 				<div class="navbar-header">
-				  <a class="navbar-brand" href="javascript:;" style="font-size:32px;">尚意购-创意产品购物平台</a>
+				  <a class="navbar-brand" href="javascript:;" style="font-size:32px;">PetLove-宠物电商平台</a>
 				</div>
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav navbar-right">

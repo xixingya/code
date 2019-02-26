@@ -61,7 +61,7 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			  <div class="container">
 				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html" style="font-size:32px;">尚意购-创意产品购物平台</a>
+				  <a class="navbar-brand" href="index.html" style="font-size:32px;">PetLove-宠物电商平台</a>
 				</div>
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav">
@@ -203,7 +203,7 @@
                              <a rel="nofollow" href="http://www.atguigu.com">关于我们</a> | <a rel="nofollow" href="http://www.atguigu.com">服务条款</a> | <a rel="nofollow" href="http://www.atguigu.com">免责声明</a> | <a rel="nofollow" href="http://www.atguigu.com">网站地图</a> | <a rel="nofollow" href="http://www.atguigu.com">联系我们</a>
                         </div>
                         <div class="copyRight">
-                            Copyright ?2010-2014atguigu.com 版权所有
+                            Copyright ?2018-2019petmall.site 版权所有
                         </div>
                     </div>
                     
