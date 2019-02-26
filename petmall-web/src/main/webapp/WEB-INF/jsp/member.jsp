@@ -52,6 +52,7 @@
 	</style>
   </head>
   <body>
+<<<<<<< HEAD
  <div class="navbar-wrapper">
       <div class="container">
 			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -75,9 +76,10 @@
             </div>
 			  </div>
 			</nav>
+=======
+  			<%@include file="/WEB-INF/jsp/common/memberfoot.jsp" %>
+>>>>>>> dad54ce2ca48b8e8bd87fc465934d6fd4595a43b
 
-      </div>
-    </div>
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-sm-3 col-md-3 column">
