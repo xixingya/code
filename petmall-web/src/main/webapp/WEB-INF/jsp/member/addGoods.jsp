@@ -87,15 +87,15 @@
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav">
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> 张三<span class="caret"></span></a>
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> ${loginMember.loginacct}<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                    <li><a href="${APP_PATH}/member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
                     <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                    <li><a href="${APP_PATH}/index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
                   </ul>
                 </li>
-                <li><a href="mycart.html"><i class="glyphicon glyphicon-shopping-cart"></i> 购物车<span class="label label-danger">42</span></a></li>
+                <li><a href="${APP_PATH}/member/cart"><i class="glyphicon glyphicon-shopping-cart"></i> 购物车<span class="label label-danger">42</span></a></li>
               </ul>
             </div>
 			  </div>
@@ -112,10 +112,10 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li>
-                                    <a rel="nofollow" href="index.html"><i class="glyphicon glyphicon-home"></i> 首页</a>
+                                    <a rel="nofollow" href="${APP_PATH}/index.html"><i class="glyphicon glyphicon-home"></i> 首页</a>
                                 </li>
                                 <li >
-                                    <a rel="nofollow" href="projects.html"><i class="glyphicon glyphicon-th-large"></i> 商品总览</a>
+                                    <a rel="nofollow" href="#"><i class="glyphicon glyphicon-th-large"></i> 商品总览</a>
                                 </li>
                                 <li class="active">
                                     <a rel="nofollow" href="javascript:;"><i class="glyphicon glyphicon-edit"></i> 发布商品</a>

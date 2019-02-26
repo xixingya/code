@@ -61,15 +61,15 @@
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav">
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> 张三<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> ${loginMember.loginacct}<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                    <li><a href="${APP_PATH}/member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
                     <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                    <li><a href="${APP_PATH}/index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
                   </ul>
                 </li>
-                <li><a href="mycart.html"><i class="glyphicon glyphicon-shopping-cart"></i> 购物车<span class="label label-danger">42</span></a></li>
+                <li><a href="${APP_PATH}/member/cart"><i class="glyphicon glyphicon-shopping-cart"></i> 购物车<span class="label label-danger">42</span></a></li>
               </ul>
             </div>
 			  </div>
@@ -82,31 +82,20 @@
 		<div class="col-sm-3 col-md-3 column">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="thumbnail" style="    border-radius: 0px;">
-						<img src="img/services-box1.jpg" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
-						<div class="caption" style="text-align:center;">
-							<h3>
-								ZhangSan
-							</h3>
-							<span class="label label-success" style="cursor:pointer;">已实名认证</span>
-                            <br>
-                            <br>
-                            <button class="btn btn-danger" onclick="window.location.href='index.html'">安全退出</button>
-						</div>
-					</div>
+				    <%@include file="/WEB-INF/jsp/common/memberinfo.jsp" %>
 				</div>
 			</div>
 			<div class="list-group">
-				<div class="list-group-item " style="cursor:pointer;" onclick="window.location.href='member.html'">
+				<div class="list-group-item " style="cursor:pointer;" onclick="window.location.href='${APP_PATH}/member'">
 					资产总览<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
 				</div>
-				<div class="list-group-item " style="cursor:pointer;" onclick="window.location.href='myshop.html'">
+				<div class="list-group-item " style="cursor:pointer;" onclick="window.location.href='${APP_PATH}/member/myshop'">
 					我的店铺<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
 				</div>
-				<div class="list-group-item " style="cursor:pointer;" onclick="window.location.href='mycart.html'">
+				<div class="list-group-item " style="cursor:pointer;" onclick="window.location.href='${APP_PATH}/member/cart'">
 					我的购物车<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
 				</div>
-				<div class="list-group-item active" style="cursor:pointer;">
+				<div class="list-group-item active" style="cursor:pointer;" onclick="window.location.href='${APP_PATH}/member/myorder'">
 					我的订单<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
 				</div>
 			</div>
